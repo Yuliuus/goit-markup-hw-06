@@ -972,14 +972,18 @@ address {
   }
 
   .footer-container {
-    
     display: flex;
     flex-direction: unset;
     flex-wrap: wrap;
     gap: 72px 24px;
     line-height: 1.5;
+    margin-left: 108px;
   }
 
+  ..logo-footer {
+    text-align: start;
+  }
+  
   .footer-form {
     flex-direction: row;
     gap: 24px;
