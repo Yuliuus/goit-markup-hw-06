@@ -50,6 +50,8 @@ address {
 
 .container {
   max-width: 320px;
+  width: 100%;
+  height: 100%;
   padding: 0 16px;
   margin: 0 auto;
 }
@@ -113,16 +115,33 @@ address {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/people-office.jpg);
+    url(../images/Dark-bg-mob-min.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
   margin: 0 auto;
-  padding: 72px 16px;
   min-width: 320px;
   height: 432px;
+  align-content: center;
+}
+
+@media screen and (min-device-pixel-ratio: 2),
+(min-resolution: 2dppx),
+(min-resolution: 192dpi) {
+.hero {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/Dark-bg-mob-x2-min.jpg);
+}
+}
+
+.hero-container {
+  padding-top: 72px;
 }
 
 .hero-title {
@@ -134,7 +153,6 @@ address {
   letter-spacing: 0.02em;
   text-align: center;
   margin-bottom: 72px;
-  padding: 0;
 }
 
 .hero-button {
@@ -206,8 +224,8 @@ address {
 /* -------------Team------------------- */
 
 .team {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 96px;
+  padding-bottom: 96px;
   background: #f4f4fd;
 }
 
@@ -315,7 +333,7 @@ address {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 24px;
+  gap: 48px;
   margin: 0;
 }
 
@@ -385,7 +403,7 @@ address {
 /* -------------Footer------------------- */
 .footer {
   background: #2e2f42;
-  padding-top: 98px;
+  padding-top: 96px;
   padding-bottom: 96px;
 }
 
@@ -546,6 +564,23 @@ address {
   margin-left: 16px;
 }
 /* --------------Menu ---------------------- */
+.backdrop-menu {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #fff;
+  transform: translateX(100%);
+  transition: transform 250ms;
+  padding: 24px 24px 40px 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.is-open-menu {
+  transform: translateX(0);
+}
 
 .mobile-menu {
   width: 320px;
@@ -553,9 +588,10 @@ address {
 }
 
 .navigation-menu {
-  display: contents;
-  padding-top: 72px;
-  padding-bottom: 168px;
+  margin-bottom: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 
 .adress-menu {
@@ -886,6 +922,11 @@ address {
   }
   .hero {
     padding: 112px 0;
+    background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/Dark-bg-tab-min.jpg);
   }
 
   @media screen and (min-device-pixel-ratio: 2),
@@ -897,7 +938,7 @@ address {
           rgba(46, 47, 66, 0.7),
           rgba(46, 47, 66, 0.7)
         ),
-        url(../images/people-office-tab-x2-min.jpg);
+        url(../images/Dark-bg-tab-x2-min.jpg);
     }
   }
 
@@ -906,12 +947,14 @@ address {
     background: #404bbf;
   }
 
-  /* ----------------------------------------*/
+  /* ---------------Features-------------------------*/
 
   .features-list {
     row-gap: 24px;
     width: calc(100% - 24px / 2);
   }
+
+  /* ---------------Members-------------------------*/
 
   /* ----------------Portfolio------------------------*/
 
@@ -925,26 +968,28 @@ address {
 
   .footer {
     background: #2e2f42;
-    padding: 100px 0 100px;
+    padding-left: 108px;
   }
 
   .footer-container {
+    
     display: flex;
+    flex-direction: unset;
     flex-wrap: wrap;
-    gap: 12px 24px;
-
+    gap: 72px 24px;
     line-height: 1.5;
   }
-  .footer-container-logo {
-    margin-right: 120px;
+
+  .footer-form {
+    flex-direction: row;
+    gap: 24px;
   }
 
-  .footer-soc-icon {
+  .footer-soc-text {
+    align-items: start;
   }
 }
 
-.mobile-menu {
-}
 /* ------------------------------------ */
 
 /* ---------------_____PC____--------------------- */
@@ -978,6 +1023,11 @@ address {
   .hero {
     max-width: 1440px;
     padding: 188px 0;
+    background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/people-office.jpg);
   }
 
   @media screen and (min-device-pixel-ratio: 2),
@@ -992,6 +1042,7 @@ address {
         url(../images/people-office-x2-min.jpg);
     }
   }
+  
   /* ----------------------------------------------- */
 
   /* ---------------Section 1 features--------------------- */
@@ -1034,6 +1085,12 @@ address {
   }
 
   /* ------members------------*/
+
+  .team {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+
   .members-list {
     display: flex;
     gap: 24px;
@@ -1045,3 +1102,6 @@ address {
 }
 
 /* ----------------Footer------------------------*/
+.footer {
+  padding: 100px 0 100px;
+}
