@@ -31,7 +31,7 @@ img {
   max-width: 100%;
 }
 
-address {
+address  {
   font-style: normal;
 }
 
@@ -123,8 +123,8 @@ address {
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
   margin: 0 auto;
   min-width: 320px;
-  height: 432px;
   align-content: center;
+  padding: 72px 0;
 }
 
 @media screen and (min-device-pixel-ratio: 2),
@@ -141,7 +141,7 @@ address {
 }
 
 .hero-container {
-  padding-top: 72px;
+  
 }
 
 .hero-title {
@@ -149,9 +149,10 @@ address {
   font-size: 36px;
   font-weight: 700;
   line-height: 1.11;
-  max-width: 288px;
+  max-width: 206px;
   letter-spacing: 0.02em;
   text-align: center;
+  margin: 0 auto;
   margin-bottom: 72px;
 }
 
@@ -194,6 +195,7 @@ address {
   letter-spacing: 0.02em;
   margin-bottom: 8px;
   text-transform: capitalize;
+  text-align: center;
 }
 .features-item {
   width: 320px;
@@ -550,7 +552,7 @@ address {
   border: none;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   padding: 8px 24px;
-  min-width: 165px;
+  width: 165px;
   max-height: 40px;
 }
 
@@ -561,7 +563,6 @@ address {
 
 .footer-form-icon {
   fill: #fff;
-  margin-left: 16px;
 }
 /* --------------Menu ---------------------- */
 .backdrop-menu {
@@ -573,12 +574,12 @@ address {
   background: #fff;
   transform: translateX(100%);
   transition: transform 250ms;
-  padding: 24px 24px 40px 16px;
+  padding: 72px 24px 40px 16px;
   display: flex;
   flex-direction: column;
 }
 
-.is-open-menu {
+.is-open {
   transform: translateX(0);
 }
 
@@ -598,25 +599,50 @@ address {
   display: contents;
 }
 
-.navigation-menu {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-}
-
 .menu-adress {
   display: flex;
   flex-direction: column;
   gap: 24px;
 }
 
-.menu-text {
-  font-weight: 700;
-  font-size: 36px;
-}
 .menu-icons {
   gap: 40px;
 }
+
+.nav-link {
+  color: #2e2f42;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  padding: 24px 0;
+  display: block;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+.address-link {
+  color: #434455;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.address-link:hover,
+.address-link:focus {
+  color: #4d5ae5;
+}
+
+.nav-link:hover {
+  color: #404bbf;
+}
+
+.nav-link:focus {
+  color: #404bbf;
+}
+
 /* --------------Modal---------------------- */
 
 .backdrop {
@@ -632,11 +658,12 @@ address {
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.is-open {
+/*.is-open {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
-}
+}*/
+
 .modal {
   width: 408px;
   min-height: 584px;
@@ -868,14 +895,14 @@ address {
     display: block;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
-
+/*
   .nav-link:hover {
     color: #404bbf;
   }
   .nav-link:focus {
     color: #404bbf;
   }
-
+*/
   .under {
     position: relative;
     color: #404bbf;
@@ -906,11 +933,12 @@ address {
     letter-spacing: 0.02em;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
+/*
   .address-link:hover,
   .address-link:focus {
     color: #404bbf;
   }
-
+*/
   /* ---------------hero--------------------- */
 
   .hero-title {
@@ -948,14 +976,22 @@ address {
   }
 
   /* ---------------Features-------------------------*/
+  .features-title {
+    text-align: start;
+  }
+  .features-item {
+    width: 356px;
+  }
 
   .features-list {
-    row-gap: 24px;
-    width: calc(100% - 24px / 2);
+    gap: 72px 24px;
+   
   }
 
   /* ---------------Members-------------------------*/
-
+.members-list {
+  gap: 64px 24px;
+}
   /* ----------------Portfolio------------------------*/
 
   .portfolio-list {
@@ -964,11 +1000,14 @@ address {
     row-gap: 72px;
   }
 
+  .portfolio-item {
+    max-width: 356px;
+  }
+
   /* -------------Footer---------------------------*/
 
   .footer {
     background: #2e2f42;
-    padding-left: 108px;
   }
 
   .footer-container {
@@ -980,7 +1019,7 @@ address {
     margin-left: 108px;
   }
 
-  ..logo-footer {
+  .logo-footer {
     text-align: start;
   }
   
@@ -989,7 +1028,11 @@ address {
     gap: 24px;
   }
 
+  .footer-text {
+    width: 264px;
+  }
   .footer-soc-text {
+    display: inline-block;
     align-items: start;
   }
 }
@@ -1026,7 +1069,7 @@ address {
 
   .hero {
     max-width: 1440px;
-    padding: 120px 0;
+    padding: 188px 0;
     background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
@@ -1100,20 +1143,28 @@ address {
     gap: 24px;
     justify-content: space-between;
   }
-}
+
 /* --------------portfoilio---------------------- */
 .portfolio-item {
 }
 
 /* ----------------Footer------------------------*/
 .footer {
-  padding: 100px 0 100px;
+
 }
 
 .footer-container {
   flex-wrap: nowrap;
   flex-direction: row;
-  padding-left: 156px 100px 159px 100px;
+  gap: 0;
   margin: 0 auto;
 }
+.footer-text {
+  width: 264px;
+  margin-right: 120px;
+}
+.footer-social-container{
+  margin-right: 80px;
+}
 
+}
